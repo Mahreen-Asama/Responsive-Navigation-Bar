@@ -1,0 +1,50 @@
+body{
+    background-image: linear-gradient(to right, hotpink, dodgerblue);
+    padding: 50px;
+}
+.flex-container{
+    background-color: rgba(76, 175, 80, 0.2); /* Green background with 20% opacity */
+    display: flex;
+    color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: Arial;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-child{
+    padding: 20px;
+    text-align: center;
+}
+div:first-child{
+    background-color: rgba(35, 117, 37, 0.3); 
+}
+.flex-child:hover{
+    background-color: rgba(35, 117, 37, 0.3); /* Green background with 30% opacity */
+}
+#item1,#item2,#item3,#item4,#item5,#item6{
+    flex-grow: 1;
+}
+.img{
+    height: 20px;
+    width: 20px;
+}
+
+@media (max-width: 1000px) {
+.flex-child{
+    flex-grow: 1;
+    width: 35%;
+}
+#img1,#img2,#img3,#img4{
+    /* half of 35% */
+    width: 17%;                
+}
+.flex-container {
+    flex-wrap: wrap;
+}
+}
+@media (max-width: 650px) {
+#img1,#img2,#img3,#img4{
+    width: 10%;                
+}
+}
